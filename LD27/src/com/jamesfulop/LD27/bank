@@ -1,0 +1,14 @@
+Skin skin;
+	Texture outline;
+	TextField textfield;
+	Stage stage;
+
+stage = new Stage();
+		Gdx.input.setInputProcessor(stage);
+		stage.setViewport(800,600,true);
+		skin = new Skin(Gdx.files.internal("data/uiskin.json"));
+		outline = new Texture(Gdx.files.internal("data/textfield.png"));
+		//skin.add("textfield", outline);
+		textfield = new TextField("", skin);
+		textfield.setMessageText("ya");
+		stage.addActor(textfield);
